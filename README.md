@@ -1,0 +1,1 @@
+to get access to remote web service add https://api.ratesapi.io to Remote Site Settings in Setup

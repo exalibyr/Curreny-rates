@@ -1,0 +1,26 @@
+<template>
+    <lightning-combobox
+        name="base"
+        label="Currency base"
+        value={currencyBase}
+        placeholder="Select base"
+        options={comboboxOptions}
+        onchange={handleChangeCombobox}>
+    </lightning-combobox>
+    <br>
+    <div class="table">
+        <template if:true={rates}>
+            <lightning-datatable
+                        data={rates}
+                        columns={columns}
+                        key-field="id"
+                        hide-checkbox-column
+                        is-loading
+                        suppress-bottom-bar>
+            </lightning-datatable>
+        </template>
+        <template if:true={error}>
+            {error}
+        </template>
+    </div>
+</template>
